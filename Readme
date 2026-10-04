@@ -1,1 +1,24 @@
+AnyMakerCatalogMod
 
+Inspired by Electron's posts, and their .dll implementation method.
+The name trainer is kind of null now. Now exe's or anything to run.
+
+Setup
+1. Unzip the folder.
+2. Copy dinput8.dll next to game.exe in your AnyMaker installation folder.
+3. Start the game, load a world, and open your inventory. The catalog appears beside it.
+
+Use
+Browse Items or Components, or search directly. Click an image to add the item. Hover for its description. Settings includes a toggle for separate color and skin variants.
+To remove it, close the game and delete this dinput8.dll from the game folder.
+
+How It Works
+The catalog runs inside the game as a DirectInput proxy DLL. It forwards DirectInput calls to the Windows DLL and uses the game's item routines. 
+No game files are edited. Adding items can change your world.
+
+Unofficial mod; not endorsed by the game developer.
+
+Change Log
+
+- Added each Keycard as an item (S01, S02, S03) 
+- Fixed some icon issues
