@@ -1,4 +1,4 @@
-# AnyMakerCatalogMod-1.3.0
+AnyMakerCatalogMod-1.3.0
 
 Change Log
 - ui opens and closes faster now, and shouldn't desync.
@@ -11,7 +11,7 @@ Change Log
 Inspired by Electron's posts, and their .dll implementation method.
 The name trainer is kind of null now. Now exe's or anything to run.
 
-## Notes 
+Notes 
 The catalog is one `dinput8.dll` placed beside `game.exe`. It forwards the
 game's DirectInput calls to the Windows system DLL, then loads a catalog inside
 AnyMaker. There is no companion executable or `_internal` folder.
@@ -21,7 +21,7 @@ Local creations are read from the current Windows user's
 installed library locations. The mod writes startup and failure events to
 `%LOCALAPPDATA%\AnyMakerCatalogDll\catalog.log`.
 
-## Features
+Features
 
 - Browse and search items and components, including optional color and skin tiles.
 - Spawn S01, S02, and S03 keycards.
@@ -29,11 +29,11 @@ installed library locations. The mod writes startup and failure events to
 - Adjust creation spawn distance. 
 - Hold Delete to target creation, then click to remove the target.
 
-## How To Use
+How To Use
 Browse Items or Components, or search directly. Click an image to add the item. Hover for its description.
 To remove it, close the game and delete this dinput8.dll from the game folder.
 
-## Setup
+Setup
 
 1. Copy dinput8.dll next to game.exe in your AnyMaker installation folder.
 2. Start the game, load a world, and open your inventory. The catalog appears beside it.
