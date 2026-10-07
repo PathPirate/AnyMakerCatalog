@@ -1,24 +1,43 @@
-AnyMakerCatalogMod
+# AnyMakerCatalogMod-1.3.0
+
+Change Log
+- ui opens and closes faster now, and shouldn't desync.
+- can now delete creations without needing the dupe tool
+- can now spawn workshop creations without needing the dupe tool
+- can now spawn creations without needing the dupe tool, check the catalog tab "creations" click to spawn 
+- Added each Keycard as an item (S01, S02, S03) 
+- Fixed some icon issues
 
 Inspired by Electron's posts, and their .dll implementation method.
 The name trainer is kind of null now. Now exe's or anything to run.
 
-Setup
-1. Unzip the folder.
-2. Copy dinput8.dll next to game.exe in your AnyMaker installation folder.
-3. Start the game, load a world, and open your inventory. The catalog appears beside it.
+## Notes 
+The catalog is one `dinput8.dll` placed beside `game.exe`. It forwards the
+game's DirectInput calls to the Windows system DLL, then loads a catalog inside
+AnyMaker. There is no companion executable or `_internal` folder.
 
-Use
-Browse Items or Components, or search directly. Click an image to add the item. Hover for its description. Settings includes a toggle for separate color and skin variants.
+Local creations are read from the current Windows user's
+`%APPDATA%\Anymaker\creations`. Workshop creations are found through Steam's
+installed library locations. The mod writes startup and failure events to
+`%LOCALAPPDATA%\AnyMakerCatalogDll\catalog.log`.
+
+## Features
+
+- Browse and search items and components, including optional color and skin tiles.
+- Spawn S01, S02, and S03 keycards.
+- Browse local and subscribed Workshop creations; click a tile to place it.
+- Adjust creation spawn distance. 
+- Hold Delete to target creation, then click to remove the target.
+
+## How To Use
+Browse Items or Components, or search directly. Click an image to add the item. Hover for its description.
 To remove it, close the game and delete this dinput8.dll from the game folder.
 
-How It Works
-The catalog runs inside the game as a DirectInput proxy DLL. It forwards DirectInput calls to the Windows DLL and uses the game's item routines. 
-No game files are edited. Adding items can change your world.
+## Setup
+
+1. Copy dinput8.dll next to game.exe in your AnyMaker installation folder.
+2. Start the game, load a world, and open your inventory. The catalog appears beside it.
 
 Unofficial mod; not endorsed by the game developer.
 
-Change Log
-- can now spawn creations without needing the dupe tool, check the catalog tab "creations" click to spawn (thanks to @Anonymous_0 in Anymaker discord  for this idea)
-- Added each Keycard as an item (S01, S02, S03) 
-- Fixed some icon issues
+
